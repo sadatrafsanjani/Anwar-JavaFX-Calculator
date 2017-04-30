@@ -1,0 +1,65 @@
+
+.master-vbox {
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-border-color: #000;
+}
+
+.control-bar {
+
+    -fx-background-color: rgba(53, 81, 112, .9);
+}
+
+.close-button {
+    -fx-background-color: rgba(229,56,72,.8);
+}
+
+.close-button:hover {
+    -fx-background-image: url("../image/close.png");
+    -fx-background-color: rgba(229,56,72,1);
+}
+
+.minus-button {
+    -fx-background-color: rgba(239,183,52,.8);
+}
+
+.minus-button:hover {
+    -fx-background-image: url("../image/minus.png");
+    -fx-background-color: rgba(239,183,52,1);
+}
+
+.close-button, .minus-button {
+    -fx-background-radius: 5em;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 65%;
+    -fx-background-insets: 0,1,1;
+}
+
+.display {
+    -fx-font-size: 46;
+    -fx-font-family: "Eras Light ITC";
+    -fx-background-color: rgba(53, 81, 112, .9);
+    -fx-text-fill: rgba(241, 241, 241, .9);
+}
+
+.buttons {
+    -fx-font-size: 19;
+    -fx-font-family: "Helvetica Neue Light";
+    -fx-background-color: rgba(224,224,224,.8);
+    -fx-background-radius: 0;
+    -fx-border-style: solid;
+    -fx-border-color: rgba(152, 152, 152, 1);
+    -fx-border-width: 0 1 1 0;
+    -fx-background-insets: 0,1,1;
+}
+
+.operator-buttons {
+    -fx-text-fill: #fff;
+    -fx-background-color: rgba(247, 146, 49, 1);
+}
+
+.buttons:pressed {
+    -fx-background-color: rgba(178,178,178,.8);
+    -fx-text-fill: #000;
+}

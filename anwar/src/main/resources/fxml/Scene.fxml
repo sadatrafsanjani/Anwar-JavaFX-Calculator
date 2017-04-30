@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="242.0" styleClass="master-vbox" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rafsanjani.anwar.controller.FXMLController">
+   <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="240.0" spacing="5.0" styleClass="control-bar">
+         <children>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#closeAction" prefHeight="16.0" prefWidth="16.0" styleClass="close-button" />
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusAction" prefHeight="16.0" prefWidth="16.0" styleClass="minus-button" />
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <Label fx:id="display" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="240.0" styleClass="display" text="0">
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </Label>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="240.0" VBox.vgrow="NEVER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="ac" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#acPressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="AC" />
+            <Button fx:id="conversion" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#conversionPressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="+/-" GridPane.columnIndex="1" />
+            <Button fx:id="percentage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#percentagePressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="\%" GridPane.columnIndex="2" />
+            <Button fx:id="division" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#operatorPressed" prefHeight="50.0" prefWidth="60.0" text="/" GridPane.columnIndex="3">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="operator-buttons" />
+               </styleClass></Button>
+            <Button fx:id="seven" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="7" GridPane.rowIndex="1" />
+            <Button fx:id="eight" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="nine" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="multiplication" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#operatorPressed" prefHeight="50.0" prefWidth="60.0" text="X" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="operator-buttons" />
+               </styleClass></Button>
+            <Button fx:id="four" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="4" GridPane.rowIndex="2" />
+            <Button fx:id="five" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="six" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="subtraction" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#operatorPressed" prefHeight="50.0" prefWidth="60.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="operator-buttons" />
+               </styleClass></Button>
+            <Button fx:id="one" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="1" GridPane.rowIndex="3" />
+            <Button fx:id="two" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="three" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="addition" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#operatorPressed" prefHeight="50.0" prefWidth="60.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="operator-buttons" />
+               </styleClass></Button>
+            <Button fx:id="zero" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="120.0" styleClass="buttons" text="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Button fx:id="point" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="60.0" styleClass="buttons" text="." GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="equal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#calculateResult" prefHeight="50.0" prefWidth="60.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="operator-buttons" />
+               </styleClass></Button>
+         </children>
+      </GridPane>
+   </children>
+</VBox>
